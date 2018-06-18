@@ -42,7 +42,9 @@ CPPFLAGS = -std=c++11 -DCOMPILEDWITHC11 -fPIC
 CPPFLAGS += -O3
 
 CPPFLAGS += -Wall -DNDEBUG
-CPPFLAGS += -I/usr/include/ORB_SLAM2
+CPPFLAGS += -Iinclude
+CPPFLAGS += -I/usr/include/ORB_SLAM2/Thirdparty/DBoW2
+CPPFLAGS += -I/usr/include/ORB_SLAM2/Thirdparty/g2o
 CPPFLAGS += -I/usr/include/eigen3
 
 LD = g++
