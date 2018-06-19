@@ -34,8 +34,6 @@ OBJECTS += src/Viewer.o
 
 CPPFLAGS = -std=c++11 -DCOMPILEDWITHC11 -fPIC
 #CPPFLAGS += -DORB_SLAM2_EXPORTS
-#CPPFLAGS += -isystem /usr/local/include/eigen3
-#CPPFLAGS += -isystem /usr/local/include/opencv
 
 ## Hunh.  Optimization level isn't supposed to change the behavior of the
 ## code, but this does:
@@ -44,13 +42,13 @@ CPPFLAGS += -O3
 CPPFLAGS += -Wall -DNDEBUG
 CPPFLAGS += -Iinclude
 CPPFLAGS += -I/usr/include/ORB_SLAM2/Thirdparty/DBoW2
-CPPFLAGS += -I/usr/include/ORB_SLAM2/Thirdparty/g2o
+CPPFLAGS += -I/usr/include/g2o
 CPPFLAGS += -I/usr/include/eigen3
 
 LD = g++
 LDLIBS += -lpangolin
 LDLIBS += -lDBoW2
-LDLIBS += -lg2o
+LDLIBS += -lg2o_core
 LDLIBS += $(shell pkg-config --libs opencv)
 
 
