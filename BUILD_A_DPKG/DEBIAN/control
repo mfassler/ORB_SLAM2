@@ -1,0 +1,15 @@
+Package: orb-slam2
+Version: 0.0.1-1
+Section: libs
+Priority: optional
+Architecture: amd64
+Homepage: https://github.com/raulmur/ORB_SLAM2
+Maintainer: Mark Fassler <mfassler@users.noreply.github.com>
+Description: real-time SLAM library
+ real-time SLAM library for Monocular, Stereo and RGB-D cameras
+ that computes the camera trajectory and a sparse 3D reconstruction
+ (in the stereo and RGB-D case with true scale). It is able to
+ detect loops and relocalize the camera in real time.
+
+
+
