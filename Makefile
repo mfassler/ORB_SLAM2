@@ -41,13 +41,10 @@ CPPFLAGS += -O3
 
 CPPFLAGS += -Wall -DNDEBUG
 CPPFLAGS += -Iinclude
-CPPFLAGS += -IThirdparty/DBoW2/
-CPPFLAGS += -I/usr/include/g2o
 CPPFLAGS += -I/usr/include/eigen3
 
 LD = g++
 LDLIBS += -lpangolin
-LDLIBS += -LThirdparty/DBoW2/lib/
 LDLIBS += -lDBoW2
 LDLIBS += -lg2o_core
 LDLIBS += $(shell pkg-config --libs opencv)
@@ -75,13 +72,7 @@ _INSTDIR=${DESTDIR}/${PREFIX}
 install:
 	mkdir -p ${_INSTDIR}/lib
 	mkdir -p ${_INSTDIR}/include/ORB_SLAM2
-	mkdir -p ${_INSTDIR}/include/DBoW2
-	mkdir -p ${_INSTDIR}/include/DUtils
 	install lib/lib* ${_INSTDIR}/lib/
-	install Thirdparty/DBoW2/lib/lib* ${_INSTDIR}/lib/
 	install include/* ${_INSTDIR}/include/ORB_SLAM2/
-	install Thirdparty/DBoW2/DBoW2/*.h ${_INSTDIR}/include/DBoW2/
-	install Thirdparty/DBoW2/DUtils/*.h ${_INSTDIR}/include/DUtils/
-
 
 
